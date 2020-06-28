@@ -18,8 +18,16 @@ echo $token;
 ```
 
 ### Validate token
+This function simply validates the JWT and returns a response code based on signature and expiry time. See ``Response codes`` for details.
 ```php
 $result = validate_token($token, $secret);
+echo $result;
+```
+
+### Validate token and get payload data post successful validation
+This function validates the JWT and returns the payload array in case of successful validation. Returns a response code otherwise. See ``Response codes`` for details.
+```php
+$result = validate_token_with_payload($token, $secret);
 echo $result;
 ```
 
